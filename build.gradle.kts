@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation("io.vavr:vavr:1.0.0-alpha-4")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
