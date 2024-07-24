@@ -1,12 +1,11 @@
-
+package practise
 import io.vavr.Tuple
 import io.vavr.Tuple3
-import io.vavr.Tuple8
 import kotlin.test.Test
 import org.junit.jupiter.api.Assertions.assertEquals
 
 
-class TuplesTest {
+class `1-TuplesTest` {
 
     fun whenCreatesTuple_thenCorrect1() {
         val java8 = Tuple.of("Java", 8)
@@ -22,7 +21,7 @@ class TuplesTest {
         val java8: Tuple3<String, Int, Double> = Tuple.of("Java", 8, 1.8)
 
         val element1 = java8._1
-        val element2 = java8._2()
+        val element2 = java8._2
         val element3 = java8._3()
 
         assertEquals("Java", element1)
