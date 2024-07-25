@@ -6,10 +6,6 @@ import org.junit.jupiter.api.Test
 
 class `4-MapVsFlatmapTest` {
 
-//    Option
-//    Option in Vavr is a container type that may or may not contain a value.
-//    It is used to avoid null values and the potential for NullPointerException
-
 //    map on Option
 //    Purpose: Applies a function to the value inside the Option if it is present,
 //    returning a new Option with the transformed value.
@@ -27,6 +23,7 @@ class `4-MapVsFlatmapTest` {
 //    Purpose: Applies a function that returns an Option to the value inside the Option,
 //    flattening the result to avoid nested Options.
 //    Usage: Use flatMap when your function returns an Option.
+
     @Test
     fun `Basic option with flatmap`() {
         val someValue = Option.of(5)

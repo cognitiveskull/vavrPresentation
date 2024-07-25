@@ -13,7 +13,6 @@ class FunctionsTest {
 
     @Test
     fun `functions theory`() {
-
         //single argument fn
         val square = Function1 { a: Int -> a * a }
         printWithSpace("single arg fn: ${square.apply(4)}")
@@ -57,11 +56,17 @@ class FunctionsTest {
     fun `function currying`() {
         val add = Function2 { a: Int, b: Int -> a + b }
 
-        printWithSpace(add.apply(2).apply(3)) // Output: 5
+        val addTwo = add.apply(2)
+
+        printWithSpace(addTwo.apply(3)) // Output: 5
     }
 
 // Higher-Order Functions
 //
+//    Functions as Parameters: You can pass functions as arguments to other functions.
+//    Functions as Return Types: Functions can return other functions.
+//    Lambda Expressions: Often used to define the functions that are passed as parameters.
+
 //    val add: (Int, Int) -> Int = { a, b -> a + b }
 //    println(add(2, 3))  // Output: 5
 

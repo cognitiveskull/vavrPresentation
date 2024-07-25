@@ -47,7 +47,6 @@ class `6-ListTest` {
     }
 
 
-
     @Test
     fun `List operations`() {
         val list = List.of(1, 1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -88,7 +87,7 @@ class `6-ListTest` {
 
     }
 
-//    If primarily working in a Java environment
+//   In Java environment
 //    and need robust functional programming capabilities
 //    and immutable collections
 

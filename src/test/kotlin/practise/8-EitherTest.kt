@@ -78,8 +78,8 @@ class `8-EitherTest` {
 
         val left: Either<String, Int> = left("Error occurred")
         val resultLeft = left.fold(
-            { leftVal: String -> "Error: $leftVal" },
-            { rightVal: Int -> "Success: $rightVal" }
+            { leftVal: String -> "Left Error: $leftVal" },
+            { rightVal: Int -> "Right Success: $rightVal" }
         )
 
         println(resultLeft) // Output: Error: Error occurred
@@ -167,7 +167,10 @@ class `8-EitherTest` {
         val right: Either<String, Int> = right(10)
 
         val valueRight: Either<String, Int> = right.orElse { right(0) } // 10
-        val valueLeft: Either<String, Int> = left.orElse { left("default error") } // 0
+        val valueLeft: Either<String, Int> = left.orElse {
+            right(0)
+//            left("error value")
+        } // 0
 
         val valueRightSupplier: Int = right.getOrElseGet { 0 } // 10
         val valueLeftSupplier: Int = left.getOrElseGet { 0 } // 0

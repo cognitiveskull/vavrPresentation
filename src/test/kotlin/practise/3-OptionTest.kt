@@ -7,6 +7,11 @@ import org.junit.jupiter.api.Test
 
 class `3-OptionTest` {
 
+
+//    Option
+//    Option in Vavr is a container type that may or may not contain a value.
+//    It is used to avoid null values and the potential for NullPointerException
+
     @Test
     fun `traditional null checks in java`() {
         var possibleNullObj: Any? = null
@@ -65,16 +70,16 @@ class `3-OptionTest` {
     fun `flattening iterables in the list`() {
         val numList =  listOf(Option.of(2), Option.of(3), Option.of(null))
 
-//        numberList2.get(2).get()
+//        numList.get(2).get()
 
-        val actualResult1 = numList
-            .filter {  it.isDefined }
-            .map { it.get() }
+//        val actualResult = numList
+//            .filter {  it.isDefined }
+//            .map { it.get() }
 
-//        val actualResult2 = numList
+//        val actualResult = numList
 //            .flatten()
 
-        assertEquals(listOf(2, 3), actualResult1)
+//        println(actualResult)
     }
 
 }

@@ -21,7 +21,7 @@ class `5-LazyTest` {
         println(supplier.get())
         println(supplier.get())
         println(supplier.get())
-//
+
 //        val lazySupplier = Lazy.of(supplier)
 //
 //        println(lazySupplier.isEvaluated)
