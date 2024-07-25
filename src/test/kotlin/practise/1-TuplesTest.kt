@@ -9,7 +9,6 @@ import kotlin.test.Test
 class `1-TuplesTest` {
 
     @Test
-
     fun `Basic tuple creation`() {
         val java8 = Tuple.of("Java", 8)
         val element1 = java8._1
