@@ -10,7 +10,7 @@ class `1-TuplesTest` {
 
     @Test
     fun `Basic tuple creation`() {
-        val java8 = Tuple.of("Java", 8)
+        val java8: Tuple8<String, Int, Int, Int, Int, Int, Int, Int> = Tuple.of("Java", 8, 4,4,5,6,7,8)
         val element1 = java8._1
         val element2 = java8._2()
 

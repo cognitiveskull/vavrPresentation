@@ -40,11 +40,11 @@ class FunctionsTest {
 
     @Test
     fun `function composition`() {
-//        val increment = Function1<Int, Int> { value -> value + 1 }
+        val increment = Function1<Int, Int> { value -> value + 1 }
         val square = Function1<Int, Int> { value -> value * value }
         val sum: Function2<Int, Int, Int> = Function2 { a: Int, b: Int -> a + b }
 
-        val squareOfSum = sum.andThen(square)
+        val squareOfSum = sum.andThen(square).andThen(increment)
 
         printWithSpace(
             squareOfSum
@@ -59,6 +59,8 @@ class FunctionsTest {
         val addTwo = add.apply(2)
 
         printWithSpace(addTwo.apply(3)) // Output: 5
+        printWithSpace(addTwo.apply(5)) // Output: 5
+        printWithSpace(addTwo.apply(7)) // Output: 5
     }
 
 // Higher-Order Functions

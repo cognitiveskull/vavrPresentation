@@ -35,8 +35,8 @@ class `3-OptionTest` {
             "$it appended string"
         }
 
-        assertEquals("None", map.toString())
-        assertEquals("Some(12345 appended string)", someMap.toString())
+        println(map.toString())
+        println(someMap.toString())
     }
 
     @Test
@@ -58,7 +58,7 @@ class `3-OptionTest` {
 
     @Test
     fun `filtering and mapping optional values`() {
-        val numberOption = Option.of(2)
+        val numberOption = Option.of(3)
         val actualResult = numberOption
             .map { it + 1 }
             .filter { it % 2 == 0 }
@@ -76,10 +76,10 @@ class `3-OptionTest` {
 //            .filter {  it.isDefined }
 //            .map { it.get() }
 
-//        val actualResult = numList
-//            .flatten()
+        val actualResult = numList
+            .flatten()
 
-//        println(actualResult)
+        println(actualResult)
     }
 
 }

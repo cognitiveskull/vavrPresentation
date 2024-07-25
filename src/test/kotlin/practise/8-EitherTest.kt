@@ -176,7 +176,7 @@ class `8-EitherTest` {
         val valueLeftSupplier: Int = left.getOrElseGet { 0 } // 0
 
         val valueRightThrow: Int = right.getOrElseThrow { _ -> RuntimeException("Error") } // 10
-//        val valueLeftThrow: Int = left.getOrElseThrow { _ -> RuntimeException("Error") } // Throws RuntimeException
+        val valueLeftThrow: Int = left.getOrElseThrow { _ -> RuntimeException("Error") } // Throws RuntimeException
     }
 
     @Test

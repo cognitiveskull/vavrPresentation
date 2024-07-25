@@ -52,7 +52,7 @@ class `6-ListTest` {
         val list = List.of(1, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 //        println(list.last())
-//        println(list.combinations(2))
+//        println(list.combinations(3))
 //        println(list.average())
 //        println(list.drop(2)) //drops from left
 //        println(list.dropRight(2)) //drops from right
@@ -66,6 +66,7 @@ class `6-ListTest` {
 
     @Test
     fun `kotlin list`() {
+
         // Creating a list
         val list = listOf(1, 2, 3, 4, 5)
 

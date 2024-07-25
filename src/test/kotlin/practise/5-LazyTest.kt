@@ -18,20 +18,20 @@ class `5-LazyTest` {
             UUID.randomUUID().toString()
         }
 
-        println(supplier.get())
-        println(supplier.get())
-        println(supplier.get())
+//        println(supplier.get())
+//        println(supplier.get())
+//        println(supplier.get())
 
-//        val lazySupplier = Lazy.of(supplier)
-//
-//        println(lazySupplier.isEvaluated)
-//
-//        println(lazySupplier.get())
-//
-//        println(lazySupplier.isEvaluated)
-//
-//        println(lazySupplier.get())
-//        println(lazySupplier.get())
+        val lazySupplier = Lazy.of(supplier)
+
+        println(lazySupplier.isEvaluated)
+
+        println(lazySupplier.get())
+
+        println(lazySupplier.isEvaluated)
+
+        println(lazySupplier.get())
+        println(lazySupplier.get())
     }
 
 //    Deferred Computation:
